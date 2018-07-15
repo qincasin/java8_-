@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/1_chapter1/1_chapter1.iml" filepath="$PROJECT_DIR$/1_chapter1/1_chapter1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2_Lambda表达式/2_Lambda表达式.iml" filepath="$PROJECT_DIR$/2_Lambda表达式/2_Lambda表达式.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3_stream/3_stream.iml" filepath="$PROJECT_DIR$/3_stream/3_stream.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java8_函数式编程.iml" filepath="$PROJECT_DIR$/java8_函数式编程.iml" />
+    </modules>
+  </component>
+</project>
