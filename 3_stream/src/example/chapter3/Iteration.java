@@ -15,11 +15,13 @@ import java.util.List;
 
 public class Iteration {
 
+    /*从外部迭代到内部迭代*/
+
+
     /**
      * 使用for循环计算来自伦敦的艺术家人数
      */
     public int externalCountArtistsFromLondon(List<Artist> allArtists){
-
 
         int count =0;
         for (Artist artist: allArtists) {

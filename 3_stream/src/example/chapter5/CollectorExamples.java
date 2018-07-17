@@ -83,6 +83,7 @@ public class CollectorExamples {
 
         //1.分组
         Map<Artist,List<Album>> albumsByArtist
+                //getMainMusician()专辑中的人数列表
                 =albums.collect(Collectors.groupingBy(album->album.getMainMusician()));
         Map<Artist,Integer> numberOfAlbums = new HashMap<>();
 

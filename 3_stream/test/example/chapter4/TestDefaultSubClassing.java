@@ -36,7 +36,7 @@ public class TestDefaultSubClassing {
      * 调用的是类中的具体方法，而不是默认方法
      */
     @Test
-    public void concretBeatsDefault(){
+    public void concreteBeatsDefault(){
         Parent parent = new OverrideParent();
         parent.welcome();
         Assert.assertEquals("Class Parent: Hi!",parent.getLastMessage());

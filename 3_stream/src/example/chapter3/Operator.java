@@ -1,6 +1,7 @@
 package example.chapter3;
 
 import base.Track;
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.*;
@@ -17,6 +18,9 @@ import java.util.stream.Stream;
  */
 
 public class Operator {
+
+    /*Collectors.toList()操作*/
+
     /**
      * 通常的一个例子
      */
@@ -25,6 +29,8 @@ public class Operator {
         List<String> collected = Stream.of("a","b","c").collect(Collectors.toList());
         System.out.println(collected);
     }
+
+    /*Map操作*/
 
     /**
      * map 原始方式
@@ -74,7 +80,7 @@ public class Operator {
     /**
      *
      * 使用流进行操作
-     * 函数式风格过滤操作(也就是 predict 操作 ,返回 true 或者 false)
+     * 函数式风格过滤操作(也就是 predicate 操作 ,返回 true 或者 false)
      */
     @Test
     public void test3_11(){
@@ -85,6 +91,8 @@ public class Operator {
     }
 
     /*flatMap操作*/
+
+
     /**
      * 包含多个列表的stream
      * 假如有一个包含多个列表的流 ， 现在希望得到所有数字的序列。
@@ -98,6 +106,7 @@ public class Operator {
                 .collect(Collectors.toList());
         System.out.println(together);
     }
+
     /*3.3.5 max和min */
 
     /**
@@ -116,6 +125,7 @@ public class Operator {
                 .get(); //如果为空则报异常该值不存在(No value present)，如果不为空则该值存在
         System.out.println(tracks.get(1));
         System.out.println(shortestTrack);
+        Assert.assertEquals(tracks.get(1),shortestTrack);
     }
 
 
@@ -149,7 +159,7 @@ public class Operator {
 //        }
 //    }
 
-    /*3.3.7 reduce */
+    /* reduce 操作*/
 
     /**
      * 使用reduce 求和

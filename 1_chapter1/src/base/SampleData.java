@@ -17,7 +17,28 @@ import static java.util.Arrays.asList;
 
 public class SampleData {
 
+
+    //创作音乐的个人或者团队
     public static final Artist johnColtrane = new Artist("John Coltrane", "US");
+    //manyTrackAlbum专辑
+    public static final Album manyTrackAlbum = new Album("sample Short Album",
+            asList(
+                    new Track("short track 1", 20), new Track("short track 2", 16),
+                    new Track("short track 3", 18), new Track("short track 4", 77),
+                    new Track("short track 5", 10)
+            ),
+            //属于johnColtrane乐队
+            asList(johnColtrane));
+
+    //manyTrackAlbum2专辑
+    public static final Album manyTrackAlbum2 = new Album("sample Short Album2",
+            asList(
+                    new Track("short track 1 one ", 61), new Track("short track 2 two ", 64),
+                    new Track("short track 3 three ", 59), new Track("short track 4 four ", 68),
+                    new Track("short track 5 five ", 70)),
+            //属于johnColtrane乐队
+            asList(johnColtrane));
+    public static final List<Album> ALBUMS = Stream.of(manyTrackAlbum,manyTrackAlbum2).collect(Collectors.toList());
 
     public static final Artist johnLennon = new Artist("John Lennon", "UK");
     public static final Artist paulMcCartney = new Artist("Paul McCartney", "UK");
@@ -34,12 +55,8 @@ public class SampleData {
 
     public static final Album sampleShortAlbum = new Album("sample Short Album", asList(new Track("short track", 30)), asList(johnColtrane));
 
-    public static final Album manyTrackAlbum = new Album("sample Short Album", asList(new Track("short track", 30), new Track("short track 2", 30), new Track("short track 3", 30), new Track("short track 4", 30), new Track("short track 5", 30)), asList(johnColtrane));
 
 
-    public static final Album manyTrackAlbum2 = new Album("sample Short Album2", asList(new Track("short track one ", 61), new Track("short track 2 two ", 64), new Track("short track 3 three ", 59), new Track("short track 4 four ", 68), new Track("short track 5 five ", 70)), asList(johnColtrane));
-
-    public static final List<Album> ALBUMS = Stream.of(manyTrackAlbum,manyTrackAlbum2).collect(Collectors.toList());
 
     public static Stream<Album> albums = Stream.of(aLoveSupreme);
 

@@ -20,6 +20,7 @@ import java.util.stream.Collectors;
  */
 
 public class ReconsitutionTest {
+
     @Test
     public void test3_190(){
         System.out.println(SampleData.ALBUMS);
@@ -40,14 +41,16 @@ public class ReconsitutionTest {
     }
 
     /**
-     * 遗留代码 找出长度大于1分钟的曲目
+     *  找出长度大于1分钟的曲目
      * @param albums
      * @return
      */
     public Set<String> findLongTracks(List<Album> albums){
         Set<String> trackNames = new HashSet<>();
         for(Album album:albums){
+            //album.getTrackList()获取专辑中所有曲目的列表
             for(Track track:album.getTrackList()){
+                //track.getLength() 获取歌曲的长度
                 if(track.getLength()>60){
                     String name = track.getName();
                     trackNames.add(name);
